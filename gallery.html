@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .button {
+            margin: 10px;
+            width: 70px;
+            height: 30px;
+            border: none;
+            background-color: darkblue;
+            color: white;
+        }
+
+        .main__gallery {
+            display: flex;
+        }
+        .main__picture {
+            margin-right: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+    <h1 class="main__header">Photo Gallery</h1>
+
+    <div class="main__gallery">
+        <img class="main__picture" id="img_1" src="1.png" alt="robot">
+        <img class="main__picture" id="img_2" src="2.png" alt="scientist">
+        <img class="main__picture" id="img_3" src="3.png" alt="programmer">
+    </div>
+
+    <div class="main__control-buttons">
+        <button class="button button_back" onclick="goBack ()">Back</button>
+        <button class="button button_forward" onclick="goForward ()">Forward</button>
+    </div>
+
+    <script>
+        function goBack () {
+            let img_1 = document.getElementById('img_1').src= "3.png";
+            let img_2 = document.getElementById('img_2').src= "1.png";
+            let img_3 = document.getElementById('img_3').src= "2.png";
+
+        };
+
+        function goForward () {
+            let img_1 = document.getElementById('img_1').src= "2.png";
+            let img_2 = document.getElementById('img_2').src= "3.png";
+            let img_3 = document.getElementById('img_3').src= "1.png";
+
+        };
+
+        
+
+    </script>
+</main>
+</body>
+
+</html>

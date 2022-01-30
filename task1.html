@@ -1,0 +1,31 @@
+<script>
+
+    function sumInput() {
+
+        let numbers = [];
+
+        for (; ;) {
+
+            let value = prompt("Введите число", "");
+
+            if (value === "" || value === null || isNaN(value)) break;
+
+            numbers.push(+value);
+        }
+
+        let sort;
+        for (let number of numbers) {
+            sort = numbers.sort();
+        }
+        alert(sort);
+
+        let sum = 0;
+        for (let number of numbers) {
+            sum += number;
+        }
+        return sum;
+
+    }
+
+    alert(sumInput());
+</script>
